@@ -65,7 +65,7 @@ namespace TackTimeManager.Application.WorkOrders.Queries.GetWorkOrderList
 
             _workOrders = new WorkOrder()
             {
-                WorkOrderNumber = _workOrderId,
+                Id = _workOrderId,
                 Assemblies = new Dictionary<Assembly, double>() { { _assembly, 1.0 } },
                 DueDate = _dueDate,
                 CreatedDate = _createdDate,

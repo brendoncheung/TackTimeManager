@@ -28,10 +28,15 @@ namespace TackTimeManager.Persistence
                 var reader = table.OpenReader(Encoding.ASCII);
                 while (reader.Read())
                 {
-                    var workOrder = new WorkOrder()
+                    if (reader.GetString("Saletype") == "WO")
                     {
-                        WorkOrderNumber = reader.GetInt32("Id"),
-                    };
+                        var workOrder = new WorkOrder()
+                        {
+                            WorkOrderNumber = reader.GetString("sono"),
+
+                        };
+                        results.Add(workOrder);
+                    }
                 }
             }
 

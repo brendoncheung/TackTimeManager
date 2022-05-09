@@ -20,7 +20,7 @@ namespace TackTimeManager.Application.WorkOrders.Queries
 
         public List<WorkOrder> Execute()
         {
-            var wo = _database.WorkOrders.ToList();
+            var wo = _database.GetAllWorkOrders();
             return wo;
         }
 
