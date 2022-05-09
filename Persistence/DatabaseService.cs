@@ -8,18 +8,45 @@ using TackTimeManager.Application.Interfaces;
 using TackTimeManager.Domain.Assemblies;
 using TackTimeManager.Domain.Parts;
 using TackTimeManager.Domain.WorkOrders;
+using TackTimeManager.Persistence.Common;
+using NDbfReader;
 
 namespace TackTimeManager.Persistence
 {
     public class DatabaseService : IDatabaseService
     {
-        public IDbSet<WorkOrder> WorkOrders { get; set; }
-        public IDbSet<Part> Parts { get; set ; }
-        public IDbSet<Assembly> Assemblies { get; set; }
+        public List<Assembly> GetAllAssemblies()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<WorkOrder> GetAllWorkOrders()
+        {
+            List<WorkOrder> results = new List<WorkOrder>();
+            using (var table = Table.Open($"Z:\\pcmrpw\\{TableName.SALES}"))
+            {
+
+            }
+
+            return results;
+        }
+
+        public List<Part> GetWorkOrderByNumber(string number)
+        {
+            throw new NotImplementedException();
+        }
 
         public void Save()
         {
             throw new NotImplementedException();
         }
+    }
+
+    public void Save()
+        {
+            throw new NotImplementedException();
+        }
+
+      
     }
 }

@@ -12,9 +12,10 @@ namespace TackTimeManager.Application.Interfaces
 {
     public interface IDatabaseService
     {
-        IDbSet<WorkOrder> WorkOrders { get; set; }
-        IDbSet<Part> Parts { get; set; }
-        IDbSet<Assembly> Assemblies { get; set; }
+        List<WorkOrder> GetAllWorkOrders();
+        List<Part> GetWorkOrderByNumber(string number);
+        List<Assembly> GetAllAssemblies();
+        
         void Save(); 
     }
 }
