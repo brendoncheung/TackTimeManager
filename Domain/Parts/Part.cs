@@ -10,7 +10,7 @@ namespace TackTimeManager.Domain.Parts
 {
     public class Part : IEntity
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public double OnHand { get; set; }
         public double OnOrder { get; set; }
         public double Cost { get; set; }

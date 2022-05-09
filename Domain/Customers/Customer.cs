@@ -9,6 +9,7 @@ namespace TackTimeManager.Domain.Customers
 {
     public class Customer : IEntity
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
+        public string Name;
     }
 }
