@@ -25,7 +25,14 @@ namespace TackTimeManager.Persistence
             List<WorkOrder> results = new List<WorkOrder>();
             using (var table = Table.Open($"Z:\\pcmrpw\\{TableName.SALES}"))
             {
-
+                var reader = table.OpenReader(Encoding.ASCII);
+                while (reader.Read())
+                {
+                    var workOrder = new WorkOrder()
+                    {
+                        WorkOrderNumber = reader.GetInt32("Id"),
+                    };
+                }
             }
 
             return results;
@@ -40,13 +47,8 @@ namespace TackTimeManager.Persistence
         {
             throw new NotImplementedException();
         }
-    }
 
-    public void Save()
-        {
-            throw new NotImplementedException();
-        }
 
-      
+
     }
 }

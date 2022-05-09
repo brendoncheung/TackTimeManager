@@ -10,7 +10,7 @@ namespace TackTimeManager.Domain.WorkOrders
 {
     public class WorkOrder : IEntity
     {
-        public int Id { get; set; }
+        public int WorkOrderNumber { get; set; }
         public Dictionary<Assembly, double> Assemblies { get; set; }
         public DateTime DueDate { get; set; }
         public DateTime CreatedDate { get; set; }

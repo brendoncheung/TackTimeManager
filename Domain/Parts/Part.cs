@@ -10,14 +10,13 @@ namespace TackTimeManager.Domain.Parts
 {
     public class Part : IEntity
     {
-        public int Id { get; set; }
+        public string PartNumber { get; set; }
+        public string ModelNumber { get; set; }
+        public string Description { get; set; }
+        public string Manufacturer { get; set; }
         public double OnHand { get; set; }
         public double OnOrder { get; set; }
         public double Cost { get; set; }
-        public string ModelNumber { get; set; }
-        public string PartNumber { get; set; }
-        public string Description { get; set; }
-        public string Manufacturer { get; set; }
         public List<Assembly> UsedOn { get; set; }
     }
 }
